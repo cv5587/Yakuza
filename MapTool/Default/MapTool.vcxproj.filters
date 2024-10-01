@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\private\MainApp.cpp">
+      <Filter>00.MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Loader.cpp">
+      <Filter>01.Levels\99.Loading\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Level_Loading.cpp">
+      <Filter>01.Levels\99.Loading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Level_Logo.cpp">
+      <Filter>01.Levels\00.Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Terrain.cpp">
+      <Filter>02.GameObjects\01.Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Background.cpp">
+      <Filter>02.GameObjects\00.Background</Filter>
+    </ClCompile>
+    <ClCompile Include="MapTool.cpp">
+      <Filter>98.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Level_Test.cpp">
+      <Filter>01.Levels\98.Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level_RunMap.cpp">
+      <Filter>01.Levels\01.RunMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\imGuizmo\GraphEditor.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\imGuizmo\ImCurveEdit.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\imGuizmo\ImGradient.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\imGuizmo\ImGuizmo.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\imGuizmo\ImSequencer.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\imgui\imgui.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\imgui\imgui_demo.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\imgui\imgui_draw.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\imgui\imgui_tables.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\imgui\imgui_widgets.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\background\imgui_impl_dx11.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Imgui\background\imgui_impl_win32.cpp">
+      <Filter>96.IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Imgui_Manager.cpp">
+      <Filter>03.Managers\00.Imgui_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\ObjPlace_Manager.cpp">
+      <Filter>03.Managers\01.ObjPlace_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Navigation_Manager.cpp">
+      <Filter>03.Managers\02.Navigation_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Terrain_Manager.cpp">
+      <Filter>03.Managers\03.Terrain_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Construction.cpp">
+      <Filter>02.GameObjects\03.Construction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\LightTool_Mgr.cpp">
+      <Filter>03.Managers\04.Light_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\LightObj.cpp">
+      <Filter>02.GameObjects\04.LightObj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Camera_Manager.cpp">
+      <Filter>03.Managers\05.Camera_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CameraObj.cpp">
+      <Filter>02.GameObjects\05.CameraObj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CameraInstallObj.cpp">
+      <Filter>02.GameObjects\06.CameraInstallObj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\PlayerCamera.cpp">
+      <Filter>02.GameObjects\02.Camera\00.PlayerCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CineCamera.cpp">
+      <Filter>02.GameObjects\02.Camera\01.CineCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SystemManager.cpp">
+      <Filter>95.Utility\00.System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Decal.cpp">
+      <Filter>02.GameObjects\07.Decal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Collider_Manager.cpp">
+      <Filter>03.Managers\06.Collider_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\ColliderObj.cpp">
+      <Filter>02.GameObjects\08.ColliderObj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\RushYakuza.cpp">
+      <Filter>02.GameObjects\09.RushYakuza</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Monster.cpp">
+      <Filter>02.GameObjects\09.RushYakuza\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\LandObject.cpp">
+      <Filter>02.GameObjects\09.RushYakuza\LandObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Trigger_Manager.cpp">
+      <Filter>03.Managers\07.Trigger_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\TriggerObj.cpp">
+      <Filter>02.GameObjects\10.TriggerObj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\TriggerObj_Manager.cpp">
+      <Filter>03.Managers\08.TriggerObj_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\NaviObj.cpp">
+      <Filter>02.GameObjects\11.NaviObj</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\public\MainApp.h">
+      <Filter>00.MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Loader.h">
+      <Filter>01.Levels\99.Loading\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Level_Loading.h">
+      <Filter>01.Levels\99.Loading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Level_Test.h">
+      <Filter>01.Levels\98.Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Level_Logo.h">
+      <Filter>01.Levels\00.Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Terrain.h">
+      <Filter>02.GameObjects\01.Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Background.h">
+      <Filter>02.GameObjects\00.Background</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Client_Defines.h">
+      <Filter>99.Header</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="MapTool.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level_RunMap.h">
+      <Filter>01.Levels\01.RunMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imGuizmo\GraphEditor.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imGuizmo\ImCurveEdit.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imGuizmo\ImGradient.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imGuizmo\ImGuizmo.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imGuizmo\ImSequencer.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imGuizmo\ImZoomSlider.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imgui\imconfig.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imgui\imgui.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imgui\imgui_internal.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imgui\imstb_rectpack.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imgui\imstb_textedit.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\imgui\imstb_truetype.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\background\imgui_impl_dx11.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Imgui\background\imgui_impl_win32.h">
+      <Filter>96.IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Imgui_Manager.h">
+      <Filter>03.Managers\00.Imgui_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\ObjPlace_Manager.h">
+      <Filter>03.Managers\01.ObjPlace_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Navigation_Manager.h">
+      <Filter>03.Managers\02.Navigation_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Terrain_Manager.h">
+      <Filter>03.Managers\03.Terrain_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Construction.h">
+      <Filter>02.GameObjects\03.Construction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\LightTool_Mgr.h">
+      <Filter>03.Managers\04.Light_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\LightObj.h">
+      <Filter>02.GameObjects\04.LightObj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Camera_Manager.h">
+      <Filter>03.Managers\05.Camera_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CameraObj.h">
+      <Filter>02.GameObjects\05.CameraObj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CameraInstallObj.h">
+      <Filter>02.GameObjects\06.CameraInstallObj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\PlayerCamera.h">
+      <Filter>02.GameObjects\02.Camera\00.PlayerCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CineCamera.h">
+      <Filter>02.GameObjects\02.Camera\01.CineCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SystemManager.h">
+      <Filter>95.Utility\00.System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Decal.h">
+      <Filter>02.GameObjects\07.Decal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Collider_Manager.h">
+      <Filter>03.Managers\06.Collider_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\ColliderObj.h">
+      <Filter>02.GameObjects\08.ColliderObj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\RushYakuza.h">
+      <Filter>02.GameObjects\09.RushYakuza</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Monster.h">
+      <Filter>02.GameObjects\09.RushYakuza\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\LandObject.h">
+      <Filter>02.GameObjects\09.RushYakuza\LandObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Trigger_Manager.h">
+      <Filter>03.Managers\07.Trigger_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\TriggerObj_Manager.h">
+      <Filter>03.Managers\08.TriggerObj_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\TriggerObj.h">
+      <Filter>02.GameObjects\10.TriggerObj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\NaviObj.h">
+      <Filter>02.GameObjects\11.NaviObj</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="MapTool.ico">
+      <Filter>98.Default</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>98.Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="00.MainApp">
+      <UniqueIdentifier>{ddfd6c52-409b-477f-938c-7a9bf07e4896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels">
+      <UniqueIdentifier>{998dbdcb-bd5f-46f2-a1b8-02c72fa6d1fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels\00.Logo">
+      <UniqueIdentifier>{3b8a75d5-a36a-4700-b903-c8faf45febd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels\98.Test">
+      <UniqueIdentifier>{94152035-f34f-4838-8f0e-7e337de9b3f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels\99.Loading">
+      <UniqueIdentifier>{13a0648d-6ddc-4bed-bbcd-17302668bdf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels\99.Loading\Loader">
+      <UniqueIdentifier>{1ec558e5-fb01-440e-87ad-95a90b445de5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects">
+      <UniqueIdentifier>{bb70a0af-9abd-4c10-a437-147c6d2655ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\01.Terrain">
+      <UniqueIdentifier>{74d74461-1f27-4ad3-8c7b-0d77910c223d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\02.Camera">
+      <UniqueIdentifier>{6dcb628e-a87f-414c-b0e1-04c7488669d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.ShaderFiles">
+      <UniqueIdentifier>{b865aaab-267c-4a79-82f5-c0059eb56ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98.Default">
+      <UniqueIdentifier>{a3544c48-2704-4c89-8b89-1303ad759d72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Header">
+      <UniqueIdentifier>{51557d73-6e7d-457b-a422-5fac878391e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels\01.RunMap">
+      <UniqueIdentifier>{219118f1-346c-43aa-b7a3-14353dcdb031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="96.IMGUI">
+      <UniqueIdentifier>{28a15c23-8b74-4eaa-a41f-df86cad90999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Managers">
+      <UniqueIdentifier>{afa3d262-2d89-4fff-bd6b-b978eb577231}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Managers\00.Imgui_Manager">
+      <UniqueIdentifier>{699c4717-0ecb-4a4a-a36a-91e286840988}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Managers\01.ObjPlace_Manager">
+      <UniqueIdentifier>{23c7d0c2-cd40-49f7-9d1e-1226f126bfbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Managers\03.Terrain_Manager">
+      <UniqueIdentifier>{dc474064-70f1-4422-aed9-2325201d1f57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Managers\02.Navigation_Manager">
+      <UniqueIdentifier>{6a521a1b-3de9-4765-9af9-b898679c9866}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\03.Construction">
+      <UniqueIdentifier>{94f829ca-2130-4431-be39-5b72fc01bdbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Managers\04.Light_Manager">
+      <UniqueIdentifier>{cab749d2-3e6d-4312-93b8-53ab5301b4b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\04.LightObj">
+      <UniqueIdentifier>{bd6a8a2f-510d-4558-8c9e-35882dddfec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Managers\05.Camera_Manager">
+      <UniqueIdentifier>{c73d5f29-067b-448a-8039-5f18c3dfa2ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\05.CameraObj">
+      <UniqueIdentifier>{68125e7f-f44e-47b8-838f-5b9039a1e1ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\00.Background">
+      <UniqueIdentifier>{800d9b07-732b-44f1-be5b-afe6cfb4a36e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\06.CameraInstallObj">
+      <UniqueIdentifier>{c0b61b5b-8c3d-4cd9-beb3-056d9fa4db2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\02.Camera\00.PlayerCamera">
+      <UniqueIdentifier>{2d72c1fe-589c-46ae-b851-4438b9a4b844}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\02.Camera\01.CineCamera">
+      <UniqueIdentifier>{679838a0-1f65-4cce-b106-041b8c0f9ded}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="95.Utility">
+      <UniqueIdentifier>{38feb924-f47d-4878-a8ff-08fde2cd9e06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="95.Utility\00.System">
+      <UniqueIdentifier>{c55aca02-848a-4026-81db-9de5a92d9b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\07.Decal">
+      <UniqueIdentifier>{2c4b6ffe-ebed-4a5f-b3fc-8371ff3dc1b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Managers\06.Collider_Manager">
+      <UniqueIdentifier>{7468e3ec-4543-4698-9882-8251deb49b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\08.ColliderObj">
+      <UniqueIdentifier>{eabbb79c-c0dd-4f3f-b081-b980fb89f34c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\09.RushYakuza">
+      <UniqueIdentifier>{5d8f1c46-06c3-4fc7-9397-5b74598a47d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\09.RushYakuza\Monster">
+      <UniqueIdentifier>{1aa1de79-331b-4447-b3d1-f74f58f65d5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\09.RushYakuza\LandObject">
+      <UniqueIdentifier>{ff1b610f-8f2b-41f1-b054-fca8dddb7287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Managers\07.Trigger_Manager">
+      <UniqueIdentifier>{e11f05ae-b56c-444c-a7f6-c3801ba4c8bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\10.TriggerObj">
+      <UniqueIdentifier>{84ea9df5-4944-433b-80e4-793a6a67d44c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Managers\08.TriggerObj_Manager">
+      <UniqueIdentifier>{5049aa18-0aed-43a7-8839-485cf7919437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObjects\11.NaviObj">
+      <UniqueIdentifier>{30eaaa1a-4b9f-4dfb-a95e-02fcabee5738}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxPosTex.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxNorTex.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxMesh.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_Cell.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxMesh_CamObj.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxCube.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MapTool.rc">
+      <Filter>98.Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

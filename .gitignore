@@ -1,0 +1,46 @@
+# Visual Studio 2015/2017 cache/options directory
+Textures/
+Models/
+Sounds/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+
+# Visual Studio profiler
+*.pssess
+*.vsp
+*.vspx
+*.vs
+
+# log files
+*.log
+*.tlog
+*.lastbuildstate
+*.obj
+*.pch
+*.unsuccessfulbuild
+*.pdb
+*.idb
+*.exe
+*.ilk
+*.exp
+*.cso
+*.recipe
+
+# Engine dll/lib
+Engine.dll
+Engine.lib
+
+Debug/
+Release/

@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{22636a95-50c8-48b6-8415-758d71fd9ccd}</ProjectGuid>
+    <RootNamespace>Client</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableUnitySupport>true</EnableUnitySupport>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableUnitySupport>true</EnableUnitySupport>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>../Bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>../Bin\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NOMINMAX;_CLIENT;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>../../EngineSDK/Inc/;../Public/;../../Imgui/background/;../../Imgui/imgui/;./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../EngineSDK/Lib/</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NOMINMAX;_CLIENT;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../EngineSDK/Inc/;../Public/;../../Imgui/background/;../../Imgui/imgui/;../../Imgui/ImGuiFileDialog/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../EngineSDK/Lib/</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Imgui\background\imgui_impl_dx11.h" />
+    <ClInclude Include="..\..\Imgui\background\imgui_impl_win32.h" />
+    <ClInclude Include="..\..\Imgui\ImGuiFileDialog\dirent\dirent.h" />
+    <ClInclude Include="..\..\Imgui\ImGuiFileDialog\ImGuiFileDialog.h" />
+    <ClInclude Include="..\..\Imgui\ImGuiFileDialog\ImGuiFileDialogConfig.h" />
+    <ClInclude Include="..\..\Imgui\ImGuiFileDialog\stb\stb_image.h" />
+    <ClInclude Include="..\..\Imgui\ImGuiFileDialog\stb\stb_image_resize2.h" />
+    <ClInclude Include="..\..\Imgui\imGuizmo\GraphEditor.h" />
+    <ClInclude Include="..\..\Imgui\imGuizmo\ImCurveEdit.h" />
+    <ClInclude Include="..\..\Imgui\imGuizmo\ImGradient.h" />
+    <ClInclude Include="..\..\Imgui\imGuizmo\ImGuizmo.h" />
+    <ClInclude Include="..\..\Imgui\imGuizmo\ImSequencer.h" />
+    <ClInclude Include="..\..\Imgui\imGuizmo\ImZoomSlider.h" />
+    <ClInclude Include="..\..\Imgui\imgui\imconfig.h" />
+    <ClInclude Include="..\..\Imgui\imgui\imgui.h" />
+    <ClInclude Include="..\..\Imgui\imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\Imgui\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\..\Imgui\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\..\Imgui\imgui\imstb_truetype.h" />
+    <ClInclude Include="..\public\Adventure.h" />
+    <ClInclude Include="..\Public\Adventure_Reactor.h" />
+    <ClInclude Include="..\Public\AI_RoadCAB.h" />
+    <ClInclude Include="..\Public\AI_RoadStanding.h" />
+    <ClInclude Include="..\Public\AI_RoadStanding_NML.h" />
+    <ClInclude Include="..\Public\AI_RoadTissue.h" />
+    <ClInclude Include="..\Public\AI_RoadYOP.h" />
+    <ClInclude Include="..\Public\Chapter1_0.h" />
+    <ClInclude Include="..\Public\Chapter1_1.h" />
+    <ClInclude Include="..\Public\Chapter2_0.h" />
+    <ClInclude Include="..\Public\Chapter3_0.h" />
+    <ClInclude Include="..\Public\Chapter3_1.h" />
+    <ClInclude Include="..\Public\Chapter4_0.h" />
+    <ClInclude Include="..\Public\Chapter5_0.h" />
+    <ClInclude Include="..\Public\Chapter5_1.h" />
+    <ClInclude Include="..\Public\Chapter6_0.h" />
+    <ClInclude Include="..\Public\Chapter7_0.h" />
+    <ClInclude Include="..\Public\Chapter7_1.h" />
+    <ClInclude Include="..\public\FightManager.h" />
+    <ClInclude Include="..\Public\KaraokeManager.h" />
+    <ClInclude Include="..\Public\KaraokeQuest.h" />
+    <ClInclude Include="..\Public\Karaoke_Glass.h" />
+    <ClInclude Include="..\Public\Karaoke_Mic.h" />
+    <ClInclude Include="..\Public\Level_KaraokeLobby.h" />
+    <ClInclude Include="..\Public\Level_NishikiWalk.h" />
+    <ClInclude Include="..\Public\MainQuest.h" />
+    <ClInclude Include="..\public\MonsterGroup.h" />
+    <ClInclude Include="..\Public\Nishiki.h" />
+    <ClInclude Include="..\Public\NPC.h" />
+    <ClInclude Include="..\Public\RoadCAB.h" />
+    <ClInclude Include="..\public\RoadNML.h" />
+    <ClInclude Include="..\public\RoadStanding.h" />
+    <ClInclude Include="..\Public\RoadTissue.h" />
+    <ClInclude Include="..\public\RoadWalker.h" />
+    <ClInclude Include="..\public\RoadStanding_NML.h" />
+    <ClInclude Include="..\public\AI_RoadWalker.h" />
+    <ClInclude Include="..\public\AI_Bike.h" />
+    <ClInclude Include="..\public\AI_CarChase.h" />
+    <ClInclude Include="..\public\AI_DefaultYakuza.h" />
+    <ClInclude Include="..\public\AI_Heli.h" />
+    <ClInclude Include="..\Public\AI_Kuze.h" />
+    <ClInclude Include="..\public\AI_Monster.h" />
+    <ClInclude Include="..\public\AI_RushYakuza.h" />
+    <ClInclude Include="..\public\AI_Sedan.h" />
+    <ClInclude Include="..\public\AI_Shakedown.h" />
+    <ClInclude Include="..\public\AI_RoadNML.h" />
+    <ClInclude Include="..\public\AI_Van.h" />
+    <ClInclude Include="..\public\AI_WPAYakuza.h" />
+    <ClInclude Include="..\public\AI_WPHYakuza.h" />
+    <ClInclude Include="..\public\AI_Yoneda.h" />
+    <ClInclude Include="..\Public\Aura.h" />
+    <ClInclude Include="..\public\Background.h" />
+    <ClInclude Include="..\Public\BehaviorAnimation.h" />
+    <ClInclude Include="..\Public\Btn.h" />
+    <ClInclude Include="..\public\CarChase.h" />
+    <ClInclude Include="..\public\CarChaseCamera.h" />
+    <ClInclude Include="..\public\CarChaseManager.h" />
+    <ClInclude Include="..\Public\CarChase_Bike.h" />
+    <ClInclude Include="..\public\CarChase_CATBullet.h" />
+    <ClInclude Include="..\Public\CarChase_Heli.h" />
+    <ClInclude Include="..\Public\CarChase_Sedan.h" />
+    <ClInclude Include="..\public\CarChase_Van.h" />
+    <ClInclude Include="..\Public\Collision_Manager.h" />
+    <ClInclude Include="..\Public\CutSceneCamera.h" />
+    <ClInclude Include="..\public\DefaultYakuza.h" />
+    <ClInclude Include="..\public\CarChase_Reactor.h" />
+    <ClInclude Include="..\public\CarChase_Monster.h" />
+    <ClInclude Include="..\Public\EffectManager.h" />
+    <ClInclude Include="..\Public\Karaoke_Kiryu.h" />
+    <ClInclude Include="..\Public\Loader_Map.h" />
+    <ClInclude Include="..\Public\NoteBase.h" />
+    <ClInclude Include="..\Public\NoteBurstHold.h" />
+    <ClInclude Include="..\Public\NoteLong.h" />
+    <ClInclude Include="..\Public\NoteManager.h" />
+    <ClInclude Include="..\Public\NoteSingle.h" />
+    <ClInclude Include="..\Public\Loader_Other.h" />
+    <ClInclude Include="..\Public\Loader_Anim.h" />
+    <ClInclude Include="..\Public\RoadYOP.h" />
+    <ClInclude Include="..\Public\Subtitle.h" />
+    <ClInclude Include="..\Public\UIDamageMoney.h" />
+    <ClInclude Include="..\Public\UIFade.h" />
+    <ClInclude Include="..\Public\UIFightScore.h" />
+    <ClInclude Include="..\Public\UIKaraoke_Play.h" />
+    <ClInclude Include="..\Public\UIKaraoke_Score.h" />
+    <ClInclude Include="..\Public\UIKaraoke_Select.h" />
+    <ClInclude Include="..\Public\UIQTE.h" />
+    <ClInclude Include="..\Public\UIStoreImage.h" />
+    <ClInclude Include="..\Public\UITitle.h" />
+    <ClInclude Include="..\Public\Weapon_Gun_Cz75.h" />
+    <ClInclude Include="..\Public\Highway_Kiryu.h" />
+    <ClInclude Include="..\Public\Highway_Taxi.h" />
+    <ClInclude Include="..\Public\Item.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_Grab.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_PickUp.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_BackWall.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_PickUp.h" />
+    <ClInclude Include="..\Public\Map.h" />
+    <ClInclude Include="..\Public\MultiLoader.h" />
+    <ClInclude Include="..\Public\Particle_Mesh.h" />
+    <ClInclude Include="..\Public\QteManager.h" />
+    <ClInclude Include="..\Public\Reactor_Bike.h" />
+    <ClInclude Include="..\Public\Reactor_Heli.h" />
+    <ClInclude Include="..\Public\Reactor_Sedan.h" />
+    <ClInclude Include="..\public\Reactor_Van.h" />
+    <ClInclude Include="..\Public\KillQuest.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_Down.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_Guard.h" />
+    <ClInclude Include="..\Public\Kiryu_KRH_Down.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_Down.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_Grab.h" />
+    <ClInclude Include="..\Public\LevelTrigger.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level_Dogimazo.h" />
+    <ClInclude Include="..\Public\Level_DogimazoBoss.h" />
+    <ClInclude Include="..\Public\Level_DogimazoLobby.h" />
+    <ClInclude Include="..\Public\Level_DogimazoStairs.h" />
+    <ClInclude Include="..\Public\Group.h" />
+    <ClInclude Include="..\Public\Image_Texture.h" />
+    <ClInclude Include="..\Public\InventoryManager.h" />
+    <ClInclude Include="..\Public\ItemData.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_Attack.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_BattleStart.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_Hit.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_Idle.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_Run.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_Sway.h" />
+    <ClInclude Include="..\Public\Kiryu_KRC_Walk.h" />
+    <ClInclude Include="..\Public\Kiryu_KRH_Attack.h" />
+    <ClInclude Include="..\Public\Kiryu_KRH_BattleStart.h" />
+    <ClInclude Include="..\Public\Kiryu_KRH_Hit.h" />
+    <ClInclude Include="..\Public\Kiryu_KRH_Idle.h" />
+    <ClInclude Include="..\Public\Kiryu_KRH_Run.h" />
+    <ClInclude Include="..\Public\Kiryu_KRH_Sway.h" />
+    <ClInclude Include="..\Public\Kiryu_KRH_Walk.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_FlyKick.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_KickCombo.h" />
+    <ClInclude Include="..\public\Kuze.h" />
+    <ClInclude Include="..\Public\Level_Karaoke.h" />
+    <ClInclude Include="..\public\Level_Office1F.h" />
+    <ClInclude Include="..\public\Level_Office2F.h" />
+    <ClInclude Include="..\Public\Level_Roadway.h" />
+    <ClInclude Include="..\Public\Level_Street.h" />
+    <ClInclude Include="..\public\Level_Tutorial.h" />
+    <ClInclude Include="..\Public\LightConstruction.h" />
+    <ClInclude Include="..\Public\MapCollider.h" />
+    <ClInclude Include="..\Public\MapColliderObj.h" />
+    <ClInclude Include="..\public\Level_OfficeBoss.h" />
+    <ClInclude Include="..\Public\MonsterTrigger.h" />
+    <ClInclude Include="..\Public\MoveQuest.h" />
+    <ClInclude Include="..\Public\Quest.h" />
+    <ClInclude Include="..\Public\QuestManager.h" />
+    <ClInclude Include="..\Public\QuestTrigger.h" />
+    <ClInclude Include="..\Public\ScriptManager.h" />
+    <ClInclude Include="..\Public\Sequance.h" />
+    <ClInclude Include="..\Public\Selector.h" />
+    <ClInclude Include="..\Public\CharacterData.h" />
+    <ClInclude Include="..\Public\CineCamera.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Public\Kiryu_Adventure_Idle.h" />
+    <ClInclude Include="..\Public\Kiryu_Adventure_Run.h" />
+    <ClInclude Include="..\Public\Kiryu_Adventure_Walk.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_Attack.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_BattleStart.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_Hit.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_Idle.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_Run.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_Sway.h" />
+    <ClInclude Include="..\Public\Kiryu_KRS_Walk.h" />
+    <ClInclude Include="..\Public\LeafNode.h" />
+    <ClInclude Include="..\Public\Client_Defines.h" />
+    <ClInclude Include="..\Public\Construction.h" />
+    <ClInclude Include="..\public\DebugCamera.h" />
+    <ClInclude Include="..\public\DebugManager.h" />
+    <ClInclude Include="..\Public\Decal.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Public\Effect.h" />
+    <ClInclude Include="..\Public\FileTotalMgr.h" />
+    <ClInclude Include="..\public\LandObject.h" />
+    <ClInclude Include="..\public\Level_Loading.h" />
+    <ClInclude Include="..\public\Level_Logo.h" />
+    <ClInclude Include="..\public\Level_Test.h" />
+    <ClInclude Include="..\public\Loader.h" />
+    <ClInclude Include="..\public\MainApp.h" />
+    <ClInclude Include="..\public\Monster.h" />
+    <ClInclude Include="..\public\RushYakuza.h" />
+    <ClInclude Include="..\Public\Particle_Point.h" />
+    <ClInclude Include="..\Public\PartObject.h" />
+    <ClInclude Include="..\public\Player.h" />
+    <ClInclude Include="..\public\PlayerCamera.h" />
+    <ClInclude Include="..\public\Shakedown.h" />
+    <ClInclude Include="..\Public\Sky.h" />
+    <ClInclude Include="..\Public\SkyDome.h" />
+    <ClInclude Include="..\Public\SocketCollider.h" />
+    <ClInclude Include="..\Public\SocketEffect.h" />
+    <ClInclude Include="..\Public\SocketModel.h" />
+    <ClInclude Include="..\Public\SocketObject.h" />
+    <ClInclude Include="..\Public\Weapon_Knife.h" />
+    <ClInclude Include="..\Public\Weapon_MchnGun.h" />
+    <ClInclude Include="..\Public\Weapon_RcktGun.h" />
+    <ClInclude Include="..\Public\Weapon_ShotGun.h" />
+    <ClInclude Include="..\Public\Weapon_Sofa.h" />
+    <ClInclude Include="..\public\SystemManager.h" />
+    <ClInclude Include="..\Public\TalkQuest.h" />
+    <ClInclude Include="..\Public\Terrain.h" />
+    <ClInclude Include="..\Public\Text.h" />
+    <ClInclude Include="..\Public\TRailEffect.h" />
+    <ClInclude Include="..\Public\Trigger.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\public\Tutorial.h" />
+    <ClInclude Include="..\public\TutorialManager.h" />
+    <ClInclude Include="..\Public\UICarchase.h" />
+    <ClInclude Include="..\Public\UIInven.h" />
+    <ClInclude Include="..\Public\UILife.h" />
+    <ClInclude Include="..\Public\UILoading.h" />
+    <ClInclude Include="..\Public\UILogo.h" />
+    <ClInclude Include="..\Public\UIMainMenu.h" />
+    <ClInclude Include="..\Public\UIManager.h" />
+    <ClInclude Include="..\Public\UIMenu.h" />
+    <ClInclude Include="..\Public\UIMoney.h" />
+    <ClInclude Include="..\Public\UINowLoading.h" />
+    <ClInclude Include="..\Public\UIScene.h" />
+    <ClInclude Include="..\Public\UISkillDestroyer.h" />
+    <ClInclude Include="..\Public\UISkillHolligan.h" />
+    <ClInclude Include="..\Public\UISkillMenu.h" />
+    <ClInclude Include="..\Public\UISkillRush.h" />
+    <ClInclude Include="..\Public\UITalk.h" />
+    <ClInclude Include="..\Public\UITutorial.h" />
+    <ClInclude Include="..\Public\UI_Effect.h" />
+    <ClInclude Include="..\Public\UI_Object.h" />
+    <ClInclude Include="..\Public\UI_Texture.h" />
+    <ClInclude Include="..\public\WPAYakuza.h" />
+    <ClInclude Include="..\public\WPHYakuza.h" />
+    <ClInclude Include="..\public\Yoneda.h" />
+    <ClInclude Include="..\public\YonedaTrigger.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Imgui\background\imgui_impl_dx11.cpp" />
+    <ClCompile Include="..\..\Imgui\background\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\..\Imgui\ImGuiFileDialog\ImGuiFileDialog.cpp" />
+    <ClCompile Include="..\..\Imgui\imGuizmo\GraphEditor.cpp" />
+    <ClCompile Include="..\..\Imgui\imGuizmo\ImCurveEdit.cpp" />
+    <ClCompile Include="..\..\Imgui\imGuizmo\ImGradient.cpp" />
+    <ClCompile Include="..\..\Imgui\imGuizmo\ImGuizmo.cpp" />
+    <ClCompile Include="..\..\Imgui\imGuizmo\ImSequencer.cpp" />
+    <ClCompile Include="..\..\Imgui\imgui\imgui.cpp" />
+    <ClCompile Include="..\..\Imgui\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\..\Imgui\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\..\Imgui\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\..\Imgui\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="..\private\Adventure.cpp" />
+    <ClCompile Include="..\Private\Adventure_Reactor.cpp" />
+    <ClCompile Include="..\Private\AI_RoadTissue.cpp" />
+    <ClCompile Include="..\Private\AI_RoadYOP.cpp" />
+    <ClCompile Include="..\Private\Chapter1_0.cpp" />
+    <ClCompile Include="..\Private\Chapter1_1.cpp" />
+    <ClCompile Include="..\Private\Chapter2_0.cpp" />
+    <ClCompile Include="..\Private\Chapter3_0.cpp" />
+    <ClCompile Include="..\Private\Chapter3_1.cpp" />
+    <ClCompile Include="..\Private\Chapter4_0.cpp" />
+    <ClCompile Include="..\Private\Chapter5_0.cpp" />
+    <ClCompile Include="..\Private\Chapter5_1.cpp" />
+    <ClCompile Include="..\Private\Chapter6_0.cpp" />
+    <ClCompile Include="..\Private\Chapter7_0.cpp" />
+    <ClCompile Include="..\Private\Chapter7_1.cpp" />
+    <ClCompile Include="..\Private\HeadUI.cpp" />
+    <ClCompile Include="..\Private\KaraokeQuest.cpp" />
+    <ClCompile Include="..\Private\Karaoke_Glass.cpp" />
+    <ClCompile Include="..\Private\Karaoke_Mic.cpp" />
+    <ClCompile Include="..\Private\Level_KaraokeLobby.cpp" />
+    <ClCompile Include="..\Private\Level_NishikiWalk.cpp" />
+    <ClCompile Include="..\Private\MainQuest.cpp" />
+    <ClCompile Include="..\Private\Nishiki.cpp" />
+    <ClCompile Include="..\Private\NPC.cpp" />
+    <ClCompile Include="..\Private\RoadTissue.cpp" />
+    <ClCompile Include="..\Private\Subtitle.cpp" />
+    <ClCompile Include="..\Private\UIDamageMoney.cpp" />
+    <ClCompile Include="..\Private\UIFade.cpp" />
+    <ClCompile Include="..\Private\UIFightScore.cpp" />
+    <ClCompile Include="..\Private\UIKaraoke_Score.cpp" />
+    <ClCompile Include="..\Private\KaraokeManager.cpp" />
+    <ClCompile Include="..\Private\AI_RoadCAB.cpp" />
+    <ClCompile Include="..\Private\AI_RoadStanding.cpp" />
+    <ClCompile Include="..\Private\AI_RoadStanding_NML.cpp" />
+    <ClCompile Include="..\private\FightManager.cpp" />
+    <ClCompile Include="..\private\MonsterGroup.cpp" />
+    <ClCompile Include="..\Private\RoadCAB.cpp" />
+    <ClCompile Include="..\private\RoadNML.cpp" />
+    <ClCompile Include="..\private\RoadStanding.cpp" />
+    <ClCompile Include="..\private\RoadWalker.cpp" />
+    <ClCompile Include="..\private\RoadStanding_NML.cpp" />
+    <ClCompile Include="..\private\AI_RoadWalker.cpp" />
+    <ClCompile Include="..\private\AI_Bike.cpp" />
+    <ClCompile Include="..\private\AI_CarChase.cpp" />
+    <ClCompile Include="..\private\AI_DefaultYakuza.cpp" />
+    <ClCompile Include="..\private\AI_Heli.cpp" />
+    <ClCompile Include="..\Private\AI_Kuze.cpp" />
+    <ClCompile Include="..\private\AI_Monster.cpp" />
+    <ClCompile Include="..\private\AI_RushYakuza.cpp" />
+    <ClCompile Include="..\private\AI_Sedan.cpp" />
+    <ClCompile Include="..\private\AI_Shakedown.cpp" />
+    <ClCompile Include="..\private\AI_RoadNML.cpp" />
+    <ClCompile Include="..\private\AI_Van.cpp" />
+    <ClCompile Include="..\private\AI_WPAYakuza.cpp" />
+    <ClCompile Include="..\private\AI_WPHYakuza.cpp" />
+    <ClCompile Include="..\private\AI_Yoneda.cpp" />
+    <ClCompile Include="..\Private\Aura.cpp" />
+    <ClCompile Include="..\private\Background.cpp" />
+    <ClCompile Include="..\Private\BehaviorAnimation.cpp" />
+    <ClCompile Include="..\Private\Btn.cpp" />
+    <ClCompile Include="..\private\CarChase.cpp" />
+    <ClCompile Include="..\private\CarChaseCamera.cpp" />
+    <ClCompile Include="..\private\CarChaseManager.cpp" />
+    <ClCompile Include="..\Private\CarChase_Bike.cpp" />
+    <ClCompile Include="..\private\CarChase_CATBullet.cpp" />
+    <ClCompile Include="..\Private\CarChase_Heli.cpp" />
+    <ClCompile Include="..\Private\CarChase_Sedan.cpp" />
+    <ClCompile Include="..\private\CarChase_Van.cpp" />
+    <ClCompile Include="..\Private\Collision_Manager.cpp" />
+    <ClCompile Include="..\Private\EffectManager.cpp" />
+    <ClCompile Include="..\Private\Karaoke_Kiryu.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_PickUp.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_BackWall.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_PickUp.cpp" />
+    <ClCompile Include="..\Private\Loader_Map.cpp" />
+    <ClCompile Include="..\Private\NoteBase.cpp" />
+    <ClCompile Include="..\Private\NoteBurstHold.cpp" />
+    <ClCompile Include="..\Private\NoteLong.cpp" />
+    <ClCompile Include="..\Private\NoteManager.cpp" />
+    <ClCompile Include="..\Private\NoteSingle.cpp" />
+    <ClCompile Include="..\Private\Loader_Other.cpp" />
+    <ClCompile Include="..\Private\Particle_Mesh.cpp" />
+    <ClCompile Include="..\Private\Loader_Anim.cpp" />
+    <ClCompile Include="..\Private\QteManager.cpp" />
+    <ClCompile Include="..\Private\Reactor_Bike.cpp" />
+    <ClCompile Include="..\Private\Reactor_Heli.cpp" />
+    <ClCompile Include="..\Private\Reactor_Sedan.cpp" />
+    <ClCompile Include="..\Private\RoadYOP.cpp" />
+    <ClCompile Include="..\Private\UICarchase.cpp" />
+    <ClCompile Include="..\Private\CutSceneCamera.cpp" />
+    <ClCompile Include="..\private\DefaultYakuza.cpp" />
+    <ClCompile Include="..\private\CarChase_Reactor.cpp" />
+    <ClCompile Include="..\private\CarChase_Monster.cpp" />
+    <ClCompile Include="..\Private\Highway_Kiryu.cpp" />
+    <ClCompile Include="..\Private\Highway_Taxi.cpp" />
+    <ClCompile Include="..\Private\Item.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_Grab.cpp" />
+    <ClCompile Include="..\Private\Map.cpp" />
+    <ClCompile Include="..\Private\MultiLoader.cpp" />
+    <ClCompile Include="..\private\Reactor_Van.cpp" />
+    <ClCompile Include="..\Private\KillQuest.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_Down.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_Guard.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRH_Down.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_Down.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_Grab.cpp" />
+    <ClCompile Include="..\Private\LevelTrigger.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level_Dogimazo.cpp" />
+    <ClCompile Include="..\Private\Level_DogimazoBoss.cpp" />
+    <ClCompile Include="..\Private\Level_DogimazoLobby.cpp" />
+    <ClCompile Include="..\Private\Level_DogimazoStairs.cpp" />
+    <ClCompile Include="..\Private\Group.cpp" />
+    <ClCompile Include="..\Private\Image_Texture.cpp" />
+    <ClCompile Include="..\Private\InventoryManager.cpp" />
+    <ClCompile Include="..\Private\ItemData.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_Attack.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_BattleStart.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_Hit.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_Idle.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_Run.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_Sway.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRC_Walk.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRH_Attack.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRH_BattleStart.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRH_Hit.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRH_Idle.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRH_Run.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRH_Sway.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRH_Walk.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_FlyKick.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_KickCombo.cpp" />
+    <ClCompile Include="..\private\Kuze.cpp" />
+    <ClCompile Include="..\Private\Level_Karaoke.cpp" />
+    <ClCompile Include="..\private\Level_Office1F.cpp" />
+    <ClCompile Include="..\private\Level_Office2F.cpp" />
+    <ClCompile Include="..\Private\Level_Roadway.cpp" />
+    <ClCompile Include="..\Private\Level_Street.cpp" />
+    <ClCompile Include="..\private\Level_Tutorial.cpp" />
+    <ClCompile Include="..\Private\LightConstruction.cpp" />
+    <ClCompile Include="..\Private\MapCollider.cpp" />
+    <ClCompile Include="..\Private\MapColliderObj.cpp" />
+    <ClCompile Include="..\private\Level_OfficeBoss.cpp" />
+    <ClCompile Include="..\Private\MonsterTrigger.cpp" />
+    <ClCompile Include="..\Private\MoveQuest.cpp" />
+    <ClCompile Include="..\Private\Quest.cpp" />
+    <ClCompile Include="..\Private\QuestManager.cpp" />
+    <ClCompile Include="..\Private\QuestTrigger.cpp" />
+    <ClCompile Include="..\Private\ScriptManager.cpp" />
+    <ClCompile Include="..\Private\Sequance.cpp" />
+    <ClCompile Include="..\Private\Selector.cpp" />
+    <ClCompile Include="..\Private\CharacterData.cpp" />
+    <ClCompile Include="..\Private\CineCamera.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Private\Kiryu_Adventure_Idle.cpp" />
+    <ClCompile Include="..\Private\Kiryu_Adventure_Run.cpp" />
+    <ClCompile Include="..\Private\Kiryu_Adventure_Walk.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_Attack.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_BattleStart.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_Hit.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_Idle.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_Run.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_Sway.cpp" />
+    <ClCompile Include="..\Private\Kiryu_KRS_Walk.cpp" />
+    <ClCompile Include="..\Private\LeafNode.cpp" />
+    <ClCompile Include="..\Private\Construction.cpp" />
+    <ClCompile Include="..\private\DebugCamera.cpp" />
+    <ClCompile Include="..\private\DebugManager.cpp" />
+    <ClCompile Include="..\Private\Decal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Private\Effect.cpp" />
+    <ClCompile Include="..\Private\FileTotalMgr.cpp" />
+    <ClCompile Include="..\private\LandObject.cpp" />
+    <ClCompile Include="..\private\Level_Loading.cpp" />
+    <ClCompile Include="..\private\Level_Logo.cpp" />
+    <ClCompile Include="..\private\Level_Test.cpp" />
+    <ClCompile Include="..\private\Loader.cpp" />
+    <ClCompile Include="..\private\MainApp.cpp" />
+    <ClCompile Include="..\private\Monster.cpp" />
+    <ClCompile Include="..\private\RushYakuza.cpp" />
+    <ClCompile Include="..\Private\Particle_Point.cpp" />
+    <ClCompile Include="..\Private\PartObject.cpp" />
+    <ClCompile Include="..\private\Player.cpp" />
+    <ClCompile Include="..\private\PlayerCamera.cpp" />
+    <ClCompile Include="..\private\Shakedown.cpp" />
+    <ClCompile Include="..\Private\Sky.cpp" />
+    <ClCompile Include="..\Private\SkyDome.cpp" />
+    <ClCompile Include="..\Private\SocketCollider.cpp" />
+    <ClCompile Include="..\Private\SocketEffect.cpp" />
+    <ClCompile Include="..\Private\SocketModel.cpp" />
+    <ClCompile Include="..\Private\SocketObject.cpp" />
+    <ClCompile Include="..\private\SystemManager.cpp" />
+    <ClCompile Include="..\Private\TalkQuest.cpp" />
+    <ClCompile Include="..\Private\Terrain.cpp" />
+    <ClCompile Include="..\Private\Text.cpp" />
+    <ClCompile Include="..\Private\TRailEffect.cpp" />
+    <ClCompile Include="..\Private\Trigger.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\private\Tutorial.cpp" />
+    <ClCompile Include="..\private\TutorialManager.cpp" />
+    <ClCompile Include="..\Private\UIInven.cpp" />
+    <ClCompile Include="..\Private\UIKaraoke_Play.cpp" />
+    <ClCompile Include="..\Private\UIKaraoke_Select.cpp" />
+    <ClCompile Include="..\Private\UILife.cpp" />
+    <ClCompile Include="..\Private\UILogo.cpp" />
+    <ClCompile Include="..\Private\UIMainMenu.cpp" />
+    <ClCompile Include="..\Private\UIManager.cpp" />
+    <ClCompile Include="..\Private\UIMenu.cpp" />
+    <ClCompile Include="..\Private\UIMoney.cpp" />
+    <ClCompile Include="..\Private\UINowLoading.cpp" />
+    <ClCompile Include="..\Private\UIQTE.cpp" />
+    <ClCompile Include="..\Private\UIScene.cpp" />
+    <ClCompile Include="..\Private\UISkillDestroyer.cpp" />
+    <ClCompile Include="..\Private\UISkillHolligan.cpp" />
+    <ClCompile Include="..\Private\UISkillMenu.cpp" />
+    <ClCompile Include="..\Private\UISkillRush.cpp" />
+    <ClCompile Include="..\Private\UIStoreImage.cpp" />
+    <ClCompile Include="..\Private\UITalk.cpp" />
+    <ClCompile Include="..\Private\UITitle.cpp" />
+    <ClCompile Include="..\Private\UITutorial.cpp" />
+    <ClCompile Include="..\Private\UI_Effect.cpp" />
+    <ClCompile Include="..\Private\UI_Object.cpp" />
+    <ClCompile Include="..\Private\UI_Texture.cpp" />
+    <ClCompile Include="..\Private\Weapon_Gun_Cz75.cpp" />
+    <ClCompile Include="..\Private\Weapon_Knife.cpp" />
+    <ClCompile Include="..\Private\Weapon_MchnGun.cpp" />
+    <ClCompile Include="..\Private\Weapon_RcktGun.cpp" />
+    <ClCompile Include="..\Private\Weapon_ShotGun.cpp" />
+    <ClCompile Include="..\Private\Weapon_Sofa.cpp" />
+    <ClCompile Include="..\private\WPAYakuza.cpp" />
+    <ClCompile Include="..\private\WPHYakuza.cpp" />
+    <ClCompile Include="..\private\Yoneda.cpp" />
+    <ClCompile Include="..\private\YonedaTrigger.cpp" />
+    <ClCompile Include="..\Public\UILoading.cpp" />
+    <ClCompile Include="Client.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Client.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_Aura.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_BoneCompute.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CS_Main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_OcculusionCulling.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CS_Main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_Trail.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxAnimMesh.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxCube.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxCube_Occulusion.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxInstance_Mesh.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxInstance_Point.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxMesh.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxMeshItem.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxMeshLight.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxMeshMap.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxMeshSky.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxNorTex.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxPosTex.hlsl" />
+    <FxCompile Include="..\Bin\ShaderFiles\Shader_VtxUI.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Bin\ShaderFiles\Shader_Client_Defines.hlsli" />
+    <None Include="..\Bin\ShaderFiles\Shader_Neo.hlsli" />
+    <None Include="..\Bin\ShaderFiles\Shader_NeoMetallic.hlsli" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
